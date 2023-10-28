@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Topcoder.com</title>
+
+  <link rel="icon" href="/favicon.png" >
+  <link rel="stylesheet" href="/global.css">
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.5/runtime.min.js"></script>
+
+  
+  
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * data: blob: 'unsafe-inline'; font-src * data: blob: 'unsafe-inline'; worker-src 'self' blob:">
+  <meta name="importmap-type" content="systemjs-importmap" >
+  
+  
+  
+
+  
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
+        "@topcoder/mfe-core": "/topcoder-mfe-core.js"
+      }
+    }
+  </script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js" as="script">
+
+  <script type="systemjs-importmap" src="/micro-frontends-config"></script>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.10.3/dist/zone.min.js"></script>
+
+  
+      <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.16.0/dist/import-map-overrides.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/system.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/amd.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/named-exports.min.js"></script>
+      
+
+        <template id="single-spa-layout">
+          <single-spa-router>
+            <nav>
+              <application name="@topcoder/mfe-header"></application>
+            </nav>
+            
+          <div id="single-spa-main"><route path="micro-frontends-react-route">
+  <application name="@topcoder/micro-frontends-react-app"></application>
+</route>
+<route path="micro-frontends-angular-route">
+  <application name="@topcoder/micro-frontends-angular-app"></application>
+</route>
+<route path="task-marketplace">
+  <application name="@topcoder/micro-frontends-task-marketplace-app"></application>
+</route>
+<route path="earn">
+  <application name="@topcoder/micro-frontends-earn-app"></application>
+</route>
+<route path="submissionreview">
+  <application name="@topcoder/micro-frontends-submission-review-app"></application>
+</route>
+<route path="model">
+  <application name="@topcoder/micro-frontends-model-app"></application>
+</route>
+<route path="community-admin">
+  <application name="@topcoder/micro-frontends-community-admin-app"></application>
+</route>
+<route path="forums">
+  <application name="@topcoder/micro-frontends-forums-app"></application>
+</route>
+<route path="unauthorized">
+  <div style="text-align: center; padding-top: 200px; font-size: 32px;">
+    You are unauthorized
+  </div>
+</route>
+<route default>
+  <div style="text-align: center; padding-top: 200px; font-size: 32px;">
+    Welcome to the Topcoder Platform. Get started by opening an app in the tool switcher on top right corner.
+  </div>
+</route>
+</div></single-spa-router>
+        </template>
+
+        
+</head>
+
+<body>
+  <script>
+    System.import('@topcoder/mfe-core');
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+
+</html>
